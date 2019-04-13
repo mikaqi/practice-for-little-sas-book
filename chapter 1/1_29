@@ -1,0 +1,23 @@
+OPTIONS NONUMBER;
+
+DATA info;
+	City =  'Sao Paulo';
+	Country = 'Brazil'
+	CountryCode = 55;
+	CityCode = 11;
+Run;
+
+/*  1 ERROR 22-322: Syntax error, expecting one of the following: !, !!, &, *, **, +, -, /, ;, <, <=, <>, =, >, ><, >=, AND, EQ, GE, GT, 
+               IN, LE, LT, MAX, MIN, NE, NG, NL, NOTIN, OR, ^=, |, ||, ~=. 
+	1 WARNING: The data set WORK.INFO may be incomplete.  When this step was stopped there were 0 observations and 4 variables
+	14 NOTE  */
+	
+* b) Corrected code;
+DATA info;
+	City =  'Sao Paulo';
+	Country = 'Brazil';
+	CountryCode = 55;
+	CityCode = 11;
+Run;
+
+* c) data set has 1 obs and 4 variables.
